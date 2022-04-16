@@ -32,7 +32,7 @@
             </div>
             <div style="margin-bottom: 20px;">
                  <label>Description: </label> 
-                 <input type="text" name="description" placeholder=" Description " required style="color:darkblue;"> 
+                 <input type="text" name="description" placeholder=" Description " required style="color:blue;"> 
             </div>
             <div style="margin-bottom: 20px;">
                  <input style="color:pink; padding:2px; border:1px solid pink; background-color: green" type="submit" value=" Save "> 
