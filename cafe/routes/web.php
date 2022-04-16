@@ -30,7 +30,9 @@ Route::get('/deleteuser/{id}',[AdminController::class,'deleteuser']);
 
 Route::get("/deletemenu/{id}",[AdminController::class,"deletemenu"]);
 
+Route::get("/updateview/{id}",[AdminController::class,"updateview"]);
 
+Route::post("/update/{id}",[AdminController::class,"update"]);
 
 Route::get('/redirects',[HomeController::class,'redirects']);
 
