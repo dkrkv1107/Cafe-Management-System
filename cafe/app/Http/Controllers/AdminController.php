@@ -8,6 +8,10 @@ use App\Models\User;
 
 use App\Models\Food;
 
+use App\Models\Reservation;
+
+use App\Models\Salonstylists;
+
 class AdminController extends Controller
 {
     public function user()
@@ -81,5 +85,52 @@ class AdminController extends Controller
 
         return redirect()->back();
     }
+    public function reservation(Request $request)
+     {
+         $data = new reservation;
+
+         $data->name=$request->name;
+         $data->email=$request->email;
+         $data->phone=$request->phone;
+         $data->guest=$request->guest;
+         $data->date=$request->date;
+         $data->time=$request->time;
+         $data->message=$request->message;
+
+
+         $data->save();
+
+         return redirect()->back();
+     }
+
+     public function viewreservation()
+     {
+         $data=reservation::all();
+         return view("admin.adminreservation", compact("data"));
+     }
+
+     public function viewstylist()
+     {
+
+         return view("admin.adminstylist");
+     } 
+
+     public function uploadstylist(Request $request)
+     {
+         $data= new salonstylists;
+
+         $image=$request->image;
+
+         $imagename =time().'.'.$image->getClientOriginalExtension();
+
+         $request->image->move('stylistimage', $imagename);
+
+         $data->image=$imagename;
+         $data->name=$request->name;
+         $data->speciality=$request->speciality;
+
+         $data->save();
+         return redirect()->back();
+     }
 
 }

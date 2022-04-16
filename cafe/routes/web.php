@@ -34,6 +34,14 @@ Route::get("/updateview/{id}",[AdminController::class,"updateview"]);
 
 Route::post("/update/{id}",[AdminController::class,"update"]);
 
+Route::post("/reservation",[AdminController::class,"reservation"]);
+
+Route::get("/viewreservation",[AdminController::class,"viewreservation"]);
+
+Route::post("/uploadstylist",[AdminController::class,"uploadstylist"]);
+
+ Route::get("/viewstylist",[AdminController::class,"viewstylist"]);
+
 Route::get('/redirects',[HomeController::class,'redirects']);
 
 Route::middleware([

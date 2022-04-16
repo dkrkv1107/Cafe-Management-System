@@ -11,7 +11,7 @@
   </head>
   <body>
    
-  <div class="container-scroller">ß
+  <div class="container-scroller">
     @include("admin.navbar")
 
       <!-- page-body-wrapper ends -->
